@@ -21,7 +21,7 @@
                     $_SESSION['user']=$email;
                     header("location:chat.php");
                     //détruire la variable message d'inscription quand on va vers le chat
-                    unset($_SESSION['message']);
+                    unset($_SESSION['message_inscription']);
 
                 }else{
                     $error="email ou mots de passe incorrects";
@@ -35,12 +35,15 @@
     
     <form action="" method="POST" class="form_connection_inscription">
         <h1>Connexion</h1>
-        <?php 
-          //affichage de du message de création de compte avec succès
-          if(isset($_SESSION['message'])){
-            echo $_SESSION['message'];
-          }
-        ?>
+        
+            <?php 
+            //affichage de du message de création de compte avec succès
+            
+            if(isset($_SESSION['message_inscription'])){
+                echo $_SESSION['message_inscription'];
+            }
+            ?>
+        
         <p class="message_error">
             <?php 
                  if(isset($error)){
