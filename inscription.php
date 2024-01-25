@@ -22,7 +22,7 @@
                    if($req){
                        //si le compte a été créé 
                        //on créé une variable pour afficher un message dans la page de connexion 
-                       $_SESSION['message_inscription']="<p class='message'>Votre Compte a été créé avec succès !</p>";
+                       $_SESSION['message_inscription']="<p class='message_inscription'>Votre Compte a été créé avec succès !</p>";
                        header("Location:index.php");
                        
 
